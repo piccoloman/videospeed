@@ -80,6 +80,13 @@ chrome.storage.sync.get(tc.settings, function (storage) {
       predefined: true
     }); // default: Z
     tc.settings.keyBindings.push({
+      action: "loop",
+      key: Number(storage.loopKeyCode) || 80,
+      value: Boolean(storage.looping) || false,
+      force: false,
+      predefined: true
+    }); // default: x
+    tc.settings.keyBindings.push({
       action: "advance",
       key: Number(storage.advanceKeyCode) || 88,
       value: Number(storage.advanceTime) || 10,
@@ -292,7 +299,7 @@ function defineVideoController() {
             <button data-action="rewind" class="rw">«</button>
             <button data-action="slower">-</button>
             <button data-action="faster">+</button>
-            <button data-action="advance" class="rw">»</button>
+            <button data-action="loop" class="rw">∞</button>
             <button data-action="display" class="hideButton">x</button>
           </span>
         </div>
@@ -727,6 +734,9 @@ function runAction(action, document, value, e) {
       } else if (action === "advance") {
         log("Fast forward", 5);
         v.currentTime += value;
+      } else if (action === 'loop') {
+        log("Loop", 5);
+        v.loop = true;
       } else if (action === "faster") {
         log("Increase speed", 5);
         // Maximum playback speed in Chrome is set to 16:

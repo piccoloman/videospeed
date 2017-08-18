@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     window.open(chrome.runtime.getURL("options.html"));
   });
 
-  document.querySelector("#about").addEventListener("click", function () {
-    window.open("https://github.com/igrigorik/videospeed");
+  document.querySelector('#about').addEventListener('click', function() {
+    window.open("https://github.com/piccoloman/videospeed");
   });
 
   document.querySelector("#feedback").addEventListener("click", function () {
