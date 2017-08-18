@@ -86,3 +86,7 @@ to the extension.
 ### License
 
 (MIT License) - Copyright (c) 2014 Ilya Grigorik
+
+With looping Addition:
+
+(MIT License) - Copyright (c) 2017 Joseph Pereira
