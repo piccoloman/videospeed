@@ -227,7 +227,7 @@ function save_options() {
     "fasterKeyCode",
     "rewindKeyCode",
     "advanceKeyCode",
-    "fastKeyCode"
+    "fastKeyCode",
     "loopKeyCode"
   ]);
   chrome.storage.sync.set(
