@@ -85,7 +85,7 @@ chrome.storage.sync.get(tc.settings, function (storage) {
       value: Boolean(storage.looping) || false,
       force: false,
       predefined: true
-    }); // default: x
+    }); // default: p
     tc.settings.keyBindings.push({
       action: "advance",
       key: Number(storage.advanceKeyCode) || 88,
